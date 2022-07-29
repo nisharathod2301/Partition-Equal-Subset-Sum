@@ -10,6 +10,8 @@ class Solution:
         for i in range(len(nums)-1,-1,-1):
             metass=set()
             for t in ss:
+                if(t+nums[i])==target:
+                    return True
                 metass.add(t+nums[i])
                 metass.add(t)
             ss = metass
